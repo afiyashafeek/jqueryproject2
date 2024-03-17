@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='jquery-3.7.1.min.js'></script>
+    <script>$ (document).ready(function(){
+        $("#hide").click(function(){
+            $(".box").hide(1000);
+        });
+        $(".show").click(function(){
+            $(".box").show(2000);
+        });
+        $(".hideshow").click(function(){
+            $(".box").toggle(500);
+        });
+        
+    });
+
+    </script>
+</head>
+<body>
+    
+
+<style>
+    .box{
+        background-color: blueviolet;
+        width: 200px;
+        height: 200px;
+        margin: 50px;
+    }
+    
+</style>
+<div class="box"></div>
+<button id="hide">hide</button>
+<button class="show">show</button>
+<button class="hideshow">hide/show</button>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='jquery-3.7.1.min.js'></script>
+    <script>
+       $("document").ready(function(){
+        $(".btn1").click(function(){
+            $(".mypara").addClass("newstyle");
+            $(".btn2").click(function(){
+                $(".mypara").removeClass("newstyle");
+                $(".btn3").click(function(){
+                    $(".mypara").toggleClass("newstyle");
+                    $(".btn4").click(function(){
+                        $(".mypara").css("color","red");
+                        $(".btn5").click(function(){
+                            $(".mypara").css({
+                                "color":"red",
+                                "background-Color":"yellow",
+                                "padding":"15px"
+                            });
+                        });
+                    });
+                })
+            })
+        })
+       })
+    </script>
+</head>
+<body>
+    <style>
+        .newstyle{
+            background-color: aqua;
+            padding: 15px;
+        }
+    </style>
+   <p class="mypara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim commodi quos voluptatum consectetur nam in reprehenderit nulla eos quas quisquam. Molestiae necessitatibus voluptatem exercitationem hic labore in ea, facilis eius?</p> 
+   <button class="btn1">add class</button>
+   <button class="btn2">remove class</button>
+   <button class="btn3">toggle class</button>
+   <button class="btn4">change single style</button>
+   <button class="btn5">change multiple styles</button>
+   <img src="thaj.jpg" alt="">
+</body>
+</html>

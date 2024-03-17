@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='jquery-3.7.1.min.js'></script>
+     <script>
+        $(document).ready(function(){
+            $(".btn1").click(function(){
+                $(".box1").animate({'left':'500px'});
+            });
+            $(".btn2").click(function(){
+            $(".box1").animate({'right':'500px',
+            'width':'250px',
+            'height':'250px',
+            'opacity':'0.5'},2000);            
+              })
+            function MultiAnim(){
+                var x=$(".box1");
+                x.animate({left:'500px'});
+                x.animate({top:'300px'});
+                x.animate({left:'0px'});
+                x.animate({top:'0px'});
+
+            }
+            $(".btn3").click(function(){
+                MultiAnim();
+            });
+         $(".btn4").click(function(){
+          setInterval(function(){
+            var x=$(".box1");
+            x.animate({left:'500px'})
+            x.animate({top:'300px'})
+            x.animate({left:'0px'})
+            x.animate({top:'0px'})
+          });
+         });
+
+        })
+     </script>
+
+
+
+
+
+</head>
+<body>
+    <style>
+        .box1{
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            position:absolute;
+            margin: 50px;
+        }
+    </style>
+   <div class="box1">  </div> 
+   <button class="btn1"> start animation</button>
+   <button class="btn2">start animation2</button>
+   <button class="btn3">start animation3</button>
+   <button class="btn4">start animation4</button>
+</body>
+</html>
